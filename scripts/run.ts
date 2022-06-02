@@ -6,8 +6,8 @@
 import { ethers } from "hardhat";
 
 const main = async () => {
-  const gameContractFactory = await ethers.getContractFactory("Passport");
-  const gameContract = await gameContractFactory.deploy(
+  const passportContractFactory = await ethers.getContractFactory("Passport");
+  const passportContract = await passportContractFactory.deploy(
     [
       "Amethyst",
       "Aquamarine",
@@ -51,82 +51,82 @@ const main = async () => {
       "https://ipfs.io/ipfs/QmP3caLHzPRdsXD6Azot8Rf5SmL4Eck6q8NwBk6nNVypZq/silver.png",
     ]
   );
-  await gameContract.deployed();
-  console.log("Contract deployed to:", gameContract.address);
+  await passportContract.deployed();
+  console.log("Contract deployed to:", passportContract.address);
 
   let txn;
   let returnedTokenUri;
 
-  txn = await gameContract.mintPassportNFT(0);
+  txn = await passportContract.mintPassportNFT(0);
   await txn.wait();
 
-  returnedTokenUri = await gameContract.tokenURI(1);
+  returnedTokenUri = await passportContract.tokenURI(1);
   console.log("Minted Passport NFT #1\nURI:", returnedTokenUri);
 
-  txn = await gameContract.mintPassportNFT(1);
+  txn = await passportContract.mintPassportNFT(1);
   await txn.wait();
 
-  returnedTokenUri = await gameContract.tokenURI(2);
+  returnedTokenUri = await passportContract.tokenURI(2);
   console.log("Minted Passport NFT #2\nURI:", returnedTokenUri);
 
-  txn = await gameContract.mintPassportNFT(2);
+  txn = await passportContract.mintPassportNFT(2);
   await txn.wait();
 
-  returnedTokenUri = await gameContract.tokenURI(3);
+  returnedTokenUri = await passportContract.tokenURI(3);
   console.log("Minted Passport NFT #3\nURI:", returnedTokenUri);
 
-  txn = await gameContract.mintPassportNFT(3);
+  txn = await passportContract.mintPassportNFT(3);
   await txn.wait();
 
-  returnedTokenUri = await gameContract.tokenURI(4);
+  returnedTokenUri = await passportContract.tokenURI(4);
   console.log("Minted Passport NFT #4\nURI:", returnedTokenUri);
 
-  txn = await gameContract.mintPassportNFT(4);
+  txn = await passportContract.mintPassportNFT(4);
   await txn.wait();
 
-  returnedTokenUri = await gameContract.tokenURI(5);
+  returnedTokenUri = await passportContract.tokenURI(5);
   console.log("Minted Passport NFT #5\nURI:", returnedTokenUri);
 
-  txn = await gameContract.mintPassportNFT(5);
+  txn = await passportContract.mintPassportNFT(5);
   await txn.wait();
 
-  returnedTokenUri = await gameContract.tokenURI(6);
+  returnedTokenUri = await passportContract.tokenURI(6);
   console.log("Minted Passport NFT #6\nURI:", returnedTokenUri);
 
-  txn = await gameContract.mintPassportNFT(6);
+  txn = await passportContract.mintPassportNFT(6);
   await txn.wait();
 
-  returnedTokenUri = await gameContract.tokenURI(7);
+  returnedTokenUri = await passportContract.tokenURI(7);
   console.log("Minted Passport NFT #7\nURI:", returnedTokenUri);
 
-  txn = await gameContract.mintPassportNFT(7);
+  txn = await passportContract.mintPassportNFT(7);
   await txn.wait();
 
-  returnedTokenUri = await gameContract.tokenURI(8);
+  returnedTokenUri = await passportContract.tokenURI(8);
   console.log("Minted Passport NFT #8\nURI:", returnedTokenUri);
 
-  txn = await gameContract.mintPassportNFT(8);
+  txn = await passportContract.mintPassportNFT(8);
   await txn.wait();
 
-  returnedTokenUri = await gameContract.tokenURI(9);
+  returnedTokenUri = await passportContract.tokenURI(9);
   console.log("Minted Passport NFT #9\nURI:", returnedTokenUri);
 
-  txn = await gameContract.mintPassportNFT(9);
+  txn = await passportContract.mintPassportNFT(9);
   await txn.wait();
 
-  returnedTokenUri = await gameContract.tokenURI(10);
+  returnedTokenUri = await passportContract.tokenURI(10);
   console.log("Minted Passport NFT #10\nURI:", returnedTokenUri);
 
-  txn = await gameContract.mintPassportNFT(10);
+  txn = await passportContract.mintPassportNFT(10);
   await txn.wait();
 
-  returnedTokenUri = await gameContract.tokenURI(11);
+  returnedTokenUri = await passportContract.tokenURI(11);
   console.log("Minted Passport NFT #11\nURI:", returnedTokenUri);
 
-  txn = await gameContract.mintPassportNFT(11);
+  txn = await passportContract.mintPassportNFT(11);
   await txn.wait();
 
-  returnedTokenUri = await gameContract.tokenURI(12);
+  returnedTokenUri = await passportContract.tokenURI(12);
   console.log("Minted Passport NFT #12\nURI:", returnedTokenUri);
 };
 

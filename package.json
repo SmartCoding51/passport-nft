@@ -1,7 +1,7 @@
 {
-  "name": "deiverse",
+  "name": "passport",
   "version": "0.0.1",
-  "description": "Deiverse Metaverse NFT Game",
+  "description": "Passport NFT",
   "main": "index.js",
   "scripts": {
     "install": "yarn && cd dapp && yarn",
@@ -13,7 +13,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Ankur Daharwal (@ankurdaharwal)",
+  "author": "Kei Nakano (@smartcoding51)",
   "license": "ISC",
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
